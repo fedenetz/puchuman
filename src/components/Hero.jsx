@@ -1,4 +1,5 @@
 import { ArrowDown, CalendarDays } from 'lucide-react'
+import { BOOKING_URL } from '../data'
 
 export default function Hero() {
   return <section className="hero" id="inicio">
@@ -8,7 +9,7 @@ export default function Hero() {
       <h1>Tu descanso<br /><em>junto al lago.</em></h1>
       <p>Cabañas en Lican Ray para descansar entre lago, volcán y naturaleza.</p>
       <div className="hero__actions">
-        <span className="booking-control booking-control--light"><button className="button button--disabled" disabled><CalendarDays size={18} /> Reservar online</button><small>Motor de reservas próximamente</small></span>
+        <a className="button" href={BOOKING_URL} target="_blank" rel="noreferrer"><CalendarDays size={18} /> Reservar online</a>
         <a className="text-link text-link--light" href="#cabanas">Ver cabañas <ArrowDown size={17} /></a>
       </div>
     </div>

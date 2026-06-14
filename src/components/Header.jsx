@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { BOOKING_URL } from '../data'
 
 const links = [['Cabañas', '#cabanas'], ['Experiencias', '#experiencias'], ['Galería', '#galeria'], ['Ubicación', '#ubicacion'], ['Preguntas', '#preguntas']]
 
@@ -22,7 +23,7 @@ export default function Header() {
     <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>{open ? <X /> : <Menu />}</button>
     <nav className={open ? 'nav nav--open' : 'nav'} aria-label="Navegación principal">
       {links.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-      <span className="booking-control"><button className="button button--small button--disabled" disabled>Reservar</button><small>Próximamente</small></span>
+      <a className="button button--small" href={BOOKING_URL} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Reservar</a>
     </nav>
   </header>
 }
