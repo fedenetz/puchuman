@@ -17,12 +17,12 @@ export default function App() {
     <main>
       <Hero />
       <Cabins />
+      <Testimonials />
       <Benefits />
       <Story />
       <Experiences />
       <Gallery />
       <Location />
-      <Testimonials />
       <FAQ />
       <FinalCTA />
     </main>
