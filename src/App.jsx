@@ -16,9 +16,9 @@ export default function App() {
     <Header />
     <main>
       <Hero />
+      <Cabins />
       <Benefits />
       <Story />
-      <Cabins />
       <Experiences />
       <Gallery />
       <Location />
