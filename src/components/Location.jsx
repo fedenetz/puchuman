@@ -1,4 +1,0 @@
-import { MapPin, Navigation, Clock } from 'lucide-react'
-export default function Location() {
-  return <section className="location section" id="ubicacion"><div className="wrap location__grid"><div className="location__copy"><p className="eyebrow eyebrow--light">Dónde estamos</p><h2>Lican Ray,<br /><em>entre lago y volcán.</em></h2><p>Una localidad tranquila a orillas del lago Calafquén, rodeada de bosque nativo y con acceso a algunos de los paisajes más queridos de La Araucanía.</p><div className="location__facts"><span><MapPin />Lican Ray, Araucanía</span><span><Clock />A minutos del lago</span><span><Navigation />Acceso a Villarrica y Coñaripe</span></div></div><figure className="map-placeholder"><img src="/puchuman%20lican%20ray/mapa-locaciones.jpg" alt="Mapa referencial con las ubicaciones de Puchuman en Lican Ray" loading="lazy" /><figcaption>Mapa referencial · ubicación exacta al confirmar</figcaption></figure></div></section>
-}
