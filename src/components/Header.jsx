@@ -18,7 +18,7 @@ export default function Header() {
   }, [open])
   return <header className={`header ${solid ? 'header--solid' : ''}`}>
     <a href="#inicio" className="brand" aria-label="Puchuman Cabañas, inicio">
-      <img src="/logo/logocabaasusoweb/4.svg" alt="" /><span><b>PUCHUMAN</b><small>CABAÑAS · LICAN RAY</small></span>
+      <img src="/logo/logocabaassinfondo/4.png" alt="" /><span><b>PUCHUMAN</b><small>CABAÑAS · LICAN RAY</small></span>
     </a>
     <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={open}>{open ? <X /> : <Menu />}</button>
     <nav className={open ? 'nav nav--open' : 'nav'} aria-label="Navegación principal">
