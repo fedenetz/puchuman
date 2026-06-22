@@ -712,7 +712,9 @@ h2 em {
   color: white;
 }
 .final-cta__content > img {
+  display: block;
   width: 100px;
+  height: auto;
   margin: 0 auto 32px;
 }
 .final-cta h2 {
@@ -734,7 +736,9 @@ h2 em {
   padding-bottom: 60px;
 }
 .footer__brand img {
+  display: block;
   width: 115px;
+  height: auto;
   margin-bottom: 25px;
 }
 .footer__brand p {
