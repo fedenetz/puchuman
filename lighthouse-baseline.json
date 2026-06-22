@@ -1,0 +1,11 @@
+{
+  "approved": false,
+  "source": "Batch 5 local production-like preview",
+  "runsPerProfile": 3,
+  "medians": {
+    "mobile": { "performance": 94, "fcp": 1513, "lcp": 3043, "tbt": 20, "cls": 0 },
+    "desktop": { "performance": 99, "fcp": 452, "lcp": 842, "tbt": 0, "cls": 0 }
+  },
+  "thresholds": null,
+  "note": "Measured locally on 2026-06-22. Enable CI thresholds only after the owner approves a deploy-preview baseline."
+}

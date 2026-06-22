@@ -5,16 +5,45 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "lint": "eslint . --max-warnings=0",
+    "format:check": "prettier --check \"src/{App,data,main,routes}.js*\" \"src/lib/**/*.js\" \"src/pages/**/*.jsx\" \"src/components/**/*.jsx\" \"scripts/**/*.mjs\" \"tests/**/*.js\" \"eslint.config.js\" \"vite.config.js\" \"package.json\"",
+    "test": "node --test",
+    "test:a11y": "node scripts/audit-accessibility.mjs",
+    "test:e2e": "node scripts/e2e-check.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "media:generate": "node scripts/generate-media.mjs",
+    "check:performance": "node scripts/check-performance-budget.mjs",
+    "lighthouse": "node scripts/run-lighthouse.mjs",
+    "monitor:production": "node scripts/monitor-production.mjs",
+    "build": "npm run media:generate && vite build && node scripts/generate-static-pages.mjs && node scripts/validate-static-build.mjs && npm run test:a11y && npm run check:performance",
+    "check:static": "node scripts/validate-static-build.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
     "leaflet": "^1.9.4",
-    "lucide-react": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-leaflet": "^5.0.0",
-    "vite": "latest"
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/montserrat": "^5.2.8",
+    "@vitejs/plugin-react": "^6.0.2",
+    "axe-core": "^4.12.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^16.5.0",
+    "jsdom": "^29.1.1",
+    "lighthouse": "12.6.1",
+    "prettier": "^3.8.4",
+    "puppeteer-core": "^24.43.1",
+    "sharp": "^0.35.2",
+    "tslib": "^2.8.1",
+    "vite": "^8.0.16"
   }
 }
