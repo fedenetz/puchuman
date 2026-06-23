@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { STATIC_ROUTES } from "../src/routes.js";
+import { BUSINESS } from "../src/data.js";
 
-const targetValue = process.argv[2] || process.env.SITE_URL;
-if (!targetValue) throw new Error("Pass a deployed URL or set SITE_URL.");
+const targetValue =
+  process.argv[2] || process.env.SITE_URL || BUSINESS.canonicalOrigin;
 const target = new URL(targetValue);
 const canonicalOrigin = new URL(
   process.env.CANONICAL_SITE_URL || process.env.SITE_URL || target.origin,

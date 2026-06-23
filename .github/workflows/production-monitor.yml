@@ -21,4 +21,4 @@ jobs:
       - run: npm ci
       - run: npm run monitor:production
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://puchuman.cl' }}
