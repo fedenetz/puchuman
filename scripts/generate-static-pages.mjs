@@ -329,7 +329,7 @@ function renderDocument(route) {
     <meta name="twitter:title" content="${escapeHtml(seo.title)}">
     <meta name="twitter:description" content="${escapeHtml(seo.description)}">
     <meta name="twitter:image" content="${image}">
-    <link rel="icon" type="image/png" href="/media/brand/favicon-64.png">
+    <link rel="icon" type="image/png" href="/media/brand/favicon-color-64.png">
     ${route.kind === "home" ? '<link rel="preload" as="image" href="/media/hero/puchuman-hero-1280.avif" imagesrcset="/media/hero/puchuman-hero-640.avif 640w, /media/hero/puchuman-hero-1280.avif 1280w, /media/hero/puchuman-hero-1920.avif 1920w" imagesizes="100vw" type="image/avif" fetchpriority="high">' : ""}
     ${stylesheetTags.join("\n    ")}
     ${jsonLd}

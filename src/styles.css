@@ -1500,6 +1500,21 @@ h2 em {
 .explorer-card__actions a:hover {
   color: #9fd0ff;
 }
+.explorer-card:hover p,
+.explorer-card:focus-visible p,
+.explorer-card.is-active p {
+  color: #b8d3ef;
+}
+.explorer-card:hover dd,
+.explorer-card:focus-visible dd,
+.explorer-card.is-active dd {
+  color: #eef6ff;
+}
+.explorer-card:hover > div > span,
+.explorer-card:focus-visible > div > span,
+.explorer-card.is-active > div > span {
+  color: #c4d4e6;
+}
 .cabin-map__canvas {
   position: relative;
   height: 680px;

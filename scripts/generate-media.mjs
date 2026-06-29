@@ -145,6 +145,10 @@ const whiteLogoSource = path.join(
   sourceDir,
   "logo/logocabaassinfondo/Logo blanco una tinta.png",
 );
+const faviconSource = path.join(
+  sourceDir,
+  "logo/logoscabaaspuchumanconfondo/2.png",
+);
 await mkdir(path.join(mediaDir, "brand"), { recursive: true });
 await Promise.all([
   sharp(logoSource)
@@ -159,10 +163,11 @@ await Promise.all([
     .resize(230, 230, { fit: "inside" })
     .webp({ quality: 85, alphaQuality: 90 })
     .toFile(path.join(mediaDir, "brand/logo-white-230.webp")),
-  sharp(logoSource)
+  sharp(faviconSource)
+    .trim()
     .resize(64, 64, { fit: "inside" })
     .png({ compressionLevel: 9, palette: true })
-    .toFile(path.join(mediaDir, "brand/favicon-64.png")),
+    .toFile(path.join(mediaDir, "brand/favicon-color-64.png")),
 ]);
 
 const fonts = [
